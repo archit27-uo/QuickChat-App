@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "315241048347",
+    "project_id": "quick-chat-f9c61",
+    "storage_bucket": "quick-chat-f9c61.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:315241048347:android:e14eb7e6578bebf795cbbe",
+        "android_client_info": {
+          "package_name": "com.archit.chat_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "315241048347-p7srad2cc27nf5h090751hho6t1geq3i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk9HWttW8UVs7RPTUHd-_16Kh3xcw_YPE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "315241048347-p7srad2cc27nf5h090751hho6t1geq3i.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "315241048347-kl9r13ti4sl3dqr8skd9rn533ak1v7ji.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.archit.chatApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
