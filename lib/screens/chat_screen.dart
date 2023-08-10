@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:chat_app/constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -12,11 +14,24 @@ class _ChatScreenState extends State<ChatScreen> {
   final _auth = FirebaseAuth.instance;
   late User loggedInUser;
 
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    getCurrentUser();
+  }
   void getCurrentUser() async {
-    final user = await _auth.currentUser!;
-    if(user!=null){
-
+    try{
+      final user = await _auth.currentUser!;
+      if(user!=null) {
+        loggedInUser = user;
+        print(loggedInUser.email);
+      }
+    }catch(e){
+      print(e);
     }
+
+
 }
 
   @override
@@ -27,8 +42,10 @@ class _ChatScreenState extends State<ChatScreen> {
         actions: <Widget>[
           IconButton(
               icon: Icon(Icons.close),
-              onPressed: () {
+              onPressed: () async {
                 //Implement logout functionality
+                await _auth.signOut();
+                Navigator.pop(context);
               }),
         ],
         title: Text('⚡️Chat'),
