@@ -1,4 +1,4 @@
-# chat_app
+# QuickChat_App
 
 A new Flutter project.
 
